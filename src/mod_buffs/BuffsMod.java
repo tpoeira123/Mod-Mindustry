@@ -14,4 +14,14 @@ public class BuffsMod extends Mod{
 
     private StatusEffect[] buffs;
 
+    // create new buffs
+    public void loadContent(){
+
+    }
+
+    // initialise buffs with points,
+    public void init(){
+
+    }
+
 }

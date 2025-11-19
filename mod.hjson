@@ -5,7 +5,11 @@ displayName: "Buff Mod"
 name: "mod_buffs"
 
 #your name
-author: "Tiago Poeira - 68231"
+author:
+"
+Tiago Poeira - 68231
+Tomás Alves - 68681
+"
 
 #the fully qualified main class of the mod
 main: "mod_buffs.BuffsMod"
