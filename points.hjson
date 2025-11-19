@@ -1,8 +1,8 @@
 #the mod name as displayed in-game
-displayName: "Buff Mod"
+displayName: "Points System Setup"
 
 #the internal name of your mod
-name: "mod_buffs"
+name: "PointsSystemMod"
 
 #your name
 author:
@@ -12,10 +12,10 @@ Tomás Alves - 68681
 "
 
 #the fully qualified main class of the mod
-main: "mod_buffs.BuffsMod"
+main: "mod_points.PointsSystemMod"
 
 #the mod description as seen in the mod dialog
-description: "Adicionar buffs á nave baseado em pontos."
+description: "Implementação do Sistema de Pontuação"
 
 #the mod version
 version: 1.0
