@@ -34,7 +34,7 @@ public class BuffsMod extends Mod{
         buff.effect = effect;       // define o  efeito enquanto o buff está ativo
     }
 
-    private StatusEffect createBuff(String id, String display, Color colorIcon, Effect effect, BuffConfig conf, float multiplier){
+    private void createBuff(String id, String display, Color colorIcon, Effect effect, BuffConfig conf, float multiplier){
         StatusEffect buff = new StatusEffect(id);
 
         buff.color = colorIcon;     // muda a cor do icon
@@ -44,10 +44,7 @@ public class BuffsMod extends Mod{
         conf.config(buff, multiplier);
 
         buffs.add(buff);    // adiciona nos meus buffs
-        return buff;
     }
-
-
 
 
     // create new buffs
