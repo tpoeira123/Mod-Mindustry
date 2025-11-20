@@ -21,6 +21,8 @@ public class PointsSystemMod {
     private static final int REWARD_LOW = 10;
     private static final int REWARD_SECTOR = 1000;
 
+    private int DELTA = 10;
+
     public static void init() {
         // 1ºMobs Defeated
         Events.on(UnitDestroyEvent.class, new Cons<UnitDestroyEvent>() {
@@ -29,8 +31,14 @@ public class PointsSystemMod {
 
                     float health = event.unit.maxHealth;
                     int pointsEarned = pointsCalculator(health);
-
                     addPoints(pointsEarned);
+
+                    if (DELTA >= getPoints(){
+                        removePoints(delta);
+                        //give buff
+                        DELTA *= 2;
+                    }
+
                     Log.info("Enemy defeated (" + (int)health + " HP) -> +" + pointsEarned + " pts");
                 }
             }
@@ -51,6 +59,7 @@ public class PointsSystemMod {
                 Log.info("New sector. Reset Points.");
             }
         });
+
     }
 
     public static int pointsCalculator(float health) {
@@ -66,6 +75,12 @@ public class PointsSystemMod {
         Log.info("Total Points: " + (current + amount));
     }
 
+    public static void removePoints(int amount) {
+        int current = Core.settings.getInt(KEY_POINTS,0);
+        Core.settings.put(KEY_POINTS,current - amount);
+        Log.info("Total Points: " + (current - amount));
+    }
+
     public static int getPoints() {
         return Core.settings.getInt(KEY_POINTS, 0);
     }
@@ -73,4 +88,5 @@ public class PointsSystemMod {
     public static void resetPoints() {
         Core.settings.put(KEY_POINTS, 0);
     }
+
 }
