@@ -1,8 +1,8 @@
 #the mod name as displayed in-game
-displayName: "Points System Setup"
+displayName: "Currency System Setup"
 
 #the internal name of your mod
-name: "PointsSystemMod"
+name: "CurrencySystemMod"
 
 #your name
 author:
@@ -12,10 +12,10 @@ Tomás Alves - 68681
 "
 
 #the fully qualified main class of the mod
-main: "mod_points.PointsSystemMod"
+main: "mod_currency.CurrencySystemMod"
 
 #the mod description as seen in the mod dialog
-description: "Implementação do Sistema de Pontuação"
+description: "Implementação do Sistema de moeda digital"
 
 #the mod version
 version: 1.0
