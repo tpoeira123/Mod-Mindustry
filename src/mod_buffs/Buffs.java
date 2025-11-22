@@ -61,6 +61,14 @@ public class Buffs {
         return doubleReloadSpeed;
     }
 
+    public StatusEffect getWaveTimeFreeze(){return waveTimeFreeze;}
+
+    public StatusEffect getEnemyFreeze(){return enemyFreeze;}
+
+    public StatusEffect getEnemyFreezeEffect(){return enemyFreezeEffect;}
+
+    public StatusEffect getDoubleStorage(){return doubleStorage;}
+
 
     private interface BuffConfig{
         void config(StatusEffect effect, float multiplier);

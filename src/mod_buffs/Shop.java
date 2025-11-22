@@ -7,5 +7,10 @@ public class Shop extends BaseDialog { // Vars, UI, baseDialog, Table, ImageButt
     public Shop() {
         super("Buffs Store");
         addCloseButton();
+        setupUI();
+    }
+
+    private void setupUI() {
+
     }
 }
