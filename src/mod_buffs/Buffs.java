@@ -8,23 +8,23 @@ import mindustry.type.StatusEffect;
 public class Buffs {
 
     // already in StatusEffect
-    private final StatusEffect tripleDamege, doubleDamage, tripleHealth, doubleHealth, doubleSpeed, doublebuildSpeed, doubleReloadSpeed;
+    private final StatusEffect tripleDamage, doubleDamage, tripleHealth, doubleHealth, doubleSpeed, doubleBuildSpeed, doubleReloadSpeed;
 
     // new created
-    private final StatusEffect waveTimeFrezze, enemyFreeze, enemyFreezeEffect, doubleStorage;
+    private final StatusEffect waveTimeFreeze, enemyFreeze, enemyFreezeEffect, doubleStorage;
 
 
     // initialises all buffs
     public Buffs(){
-        tripleDamege = new StatusEffect("tripleDamege");
+        tripleDamage = new StatusEffect("tripleDamage");
         doubleDamage = new StatusEffect("doubleDamage");
         tripleHealth = new StatusEffect("tripleHealth");
         doubleHealth = new StatusEffect("doubleHealth");
         doubleSpeed = new StatusEffect("doubleSpeed");
-        doublebuildSpeed = new StatusEffect("doublebuildSpeed");
+        doubleBuildSpeed = new StatusEffect("doubleBuildSpeed");
         doubleReloadSpeed = new StatusEffect("doubleReloadSpeed");
 
-        waveTimeFrezze = new StatusEffect("waveTimeFrezze");
+        waveTimeFreeze = new StatusEffect("waveTimeFreeze");
         enemyFreeze = new StatusEffect("enemyFreeze");
         enemyFreezeEffect = new StatusEffect("enemyFreezeEffect");
         doubleStorage = new StatusEffect("doubleStorage");
@@ -33,8 +33,8 @@ public class Buffs {
     }
 
     // get of the buffs
-    public StatusEffect getTripleDamege(){
-        return tripleDamege;
+    public StatusEffect getTripleDamage(){
+        return tripleDamage;
     }
 
     public StatusEffect getDoubleDamage(){
@@ -53,8 +53,8 @@ public class Buffs {
         return doubleSpeed;
     }
 
-    public StatusEffect getDoublebuildSpeed(){
-        return doublebuildSpeed;
+    public StatusEffect getDoubleBuildSpeed(){
+        return doubleBuildSpeed;
     }
 
     public StatusEffect getDoubleReloadSpeed(){
@@ -92,7 +92,7 @@ public class Buffs {
 
     // creates all the buffs
     private void loadBuffers(){
-        createBuff(tripleDamege, "Super damage (3x)", Color.red, Fx.hitLaserColor,
+        createBuff(tripleDamage, "Super damage (3x)", Color.red, Fx.hitLaserColor,
                 (buff, mult) -> buff.damageMultiplier = mult, 3f);
 
         createBuff(doubleDamage,"Super damage (2x)", Color.red, Fx.hitLaserColor,
@@ -107,19 +107,19 @@ public class Buffs {
         createBuff(doubleSpeed, "Super Speed (2x)", Color.gray, Fx.lightning,
                 (buff, mult) -> buff.speedMultiplier = mult, 2f);
 
-        createBuff(doublebuildSpeed, "Speed Buider (2x)", Color.yellow, Fx.coreBuildBlock,
+        createBuff(doubleBuildSpeed, "Speed Buider (2x)", Color.yellow, Fx.coreBuildBlock,
                 (buff, mult) -> buff.buildSpeedMultiplier = mult, 2f);
 
         createBuff(doubleReloadSpeed, "Fast Reload (2x)", Color.brown, Fx.fire,
                 (buff, mult) -> buff.reloadMultiplier = mult, 2f);
 
-        createBuff(waveTimeFrezze, "Wave time frezzes", Color.orange, Fx.overdriven);
+        createBuff(waveTimeFreeze, "Wave time freezes", Color.orange, Fx.overdriven);
 
         // ------
         createBuff(enemyFreeze, "Enemy freeze", Color.blue, Fx.freezing);
 
-        createBuff(enemyFreezeEffect, "Eneny freeze effects", Color.blue, Fx.freezing);
-        // the reason for not joining this two is because the game doesn't know where to implement, so, it would paralize the enimies and the player.
+        createBuff(enemyFreezeEffect, "Enemy freeze effects", Color.blue, Fx.freezing);
+        // the reason for not joining this two is that the game doesn't know where to implement, so, it would paralize the enimies and the player.
         // also, every enemy that spawns later (after stating the buff) would spawn with normal stats, and not frozen
 
         createBuff(doubleStorage, "Double Storage", Color.yellow, Fx.overdriven);
